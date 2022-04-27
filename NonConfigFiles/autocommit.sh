@@ -56,3 +56,6 @@ push_config(){
 
 grab_version
 push_config
+
+
+echo M117 Config backed up > /tmp/printer
