@@ -1,5 +1,2 @@
 #!/bin/bash
-IP=$(hostname -I)
-echo M117 $IP > ~/gcode_files/ip.gcode
-
-
+echo M117 IP:$(hostname -I) > /tmp/printer
