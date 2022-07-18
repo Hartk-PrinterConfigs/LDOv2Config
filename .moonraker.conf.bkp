@@ -7,7 +7,7 @@ max_upload_size = 1024
 [file_manager]
 config_path = ~/klipper_config
 log_path = ~/klipper_logs
-enable_object_processing = False
+enable_object_processing = True
 
 [authorization]
 cors_domains = 
@@ -45,7 +45,7 @@ install_script = install.sh
 
 [wled lights]
 type = http
-address = 192.168.1.25
+address = 192.168.1.15
 initial_red = 0.7
 initial_green = 0.7
 initial_blue = 0.7
