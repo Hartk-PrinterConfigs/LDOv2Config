@@ -1,0 +1,27 @@
+:root {
+    --Primary:        #63666a;    /*Voron:Black*/
+    --Secondary:      #44d62c;    /*Voron:Red*/
+    --r_green:        #44d62c;    /*ratrig:green*/
+    --r_gray:         #2b2b2b;    /*ratrig:grey*/
+    --Green:          #44d62c; 
+    --Red:            #ff5555;
+    --Warnings:       #44d62c;
+    --Text:           #f8f8f2;
+    --DarkerText:     #f5f5f2;
+    --Background:     #44475a;
+    --DarkBackground: #63666a;
+    --Toolbars:       #44475a;
+    --Sheets:         #63666a;
+}
+
+#nav-header .v-toolbar__title {
+    font-size: 24px;
+    vertical-align: middle;
+    color: #76fb00;
+    font-family: monospace;
+}
+
+.v-application .warning {
+    background-color: var(--r_green) !important;
+    border-color: var(--r_green)  !important;
+}
