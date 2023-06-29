@@ -1,1 +1,6 @@
 NonConfigFiles/e131/
+/config/printer-*.cfg
+/systemd/
+/comms/
+/database/
+/gcodes/
