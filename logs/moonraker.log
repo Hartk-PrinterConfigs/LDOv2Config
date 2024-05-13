@@ -3229,3 +3229,31 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary6KbzgOeS8DnHfr
 2024-05-13 21:35:40,715 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
 2024-05-13 21:35:42,178 [server.py:add_log_rollover_item()] - CPU Throttled Flags: ['Previously Temperature Limited']
 2024-05-13 21:35:43,001 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.73ms
+2024-05-13 21:36:13,003 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.23ms
+2024-05-13 21:36:43,005 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.47ms
+2024-05-13 21:37:13,003 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.22ms
+2024-05-13 21:37:25,707 [job_state.py:_status_update()] - Job Started: 350-DRILL SWORD-PNP.gcode
+2024-05-13 21:37:49,818 [application.py:prepare()] - Upload Request Received from 192.168.1.127
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTWhL0P4WkOnsARyu
+2024-05-13 21:37:49,841 [application.py:post()] - Processing Uploaded File: printer_macros.cfg
+2024-05-13 21:37:49,852 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.127) [_TRUSTED_USER_] 36.18ms
+2024-05-13 21:38:02,433 [application.py:log_request()] - 101 GET /websocket (192.168.1.127) [_TRUSTED_USER_] 5.77ms
+2024-05-13 21:38:02,435 [websockets.py:open()] - Websocket Opened: ID: 548263055760, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.1.28
+2024-05-13 21:38:02,475 [websockets.py:_handle_identify()] - Websocket 548263055760 Client Identified - Name: mainsail, Version: 2.9.1, Type: web
+2024-05-13 21:38:55,322 [application.py:prepare()] - Upload Request Received from 192.168.1.127
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoz3navn9xnp5XFGF
+2024-05-13 21:38:55,352 [application.py:post()] - Processing Uploaded File: printer_macros.cfg
+2024-05-13 21:38:55,367 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.127) [_TRUSTED_USER_] 47.48ms
+2024-05-13 21:39:38,725 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-05-13 21:39:38,967 [application.py:log_request()] - 503 GET /printer/objects/query?print_stats&display_status (192.168.1.149) [_TRUSTED_USER_] 4.87ms
+2024-05-13 21:39:38,975 [application.py:log_request()] - 503 GET /printer/objects/query?heater_bed&extruder&print_stats&toolhead&display_status&virtual_sdcard&temperature_sensor%20raspi&temperature_sensor%20mcu&temperature_sensor%20toolhead&temperature_sensor%20chamber (192.168.1.149) [_TRUSTED_USER_] 4.42ms
+2024-05-13 21:39:39,970 [application.py:log_request()] - 503 GET /printer/objects/query?print_stats&display_status (192.168.1.149) [_TRUSTED_USER_] 6.16ms
+2024-05-13 21:39:39,983 [application.py:log_request()] - 503 GET /printer/objects/query?heater_bed&extruder&print_stats&toolhead&display_status&virtual_sdcard&temperature_sensor%20raspi&temperature_sensor%20mcu&temperature_sensor%20toolhead&temperature_sensor%20chamber (192.168.1.149) [_TRUSTED_USER_] 7.50ms
+2024-05-13 21:39:39,990 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-05-13 21:39:43,010 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.85ms
+2024-05-13 21:39:46,948 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-05-13 21:39:46,956 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-05-13 21:39:47,093 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-05-13 21:39:47,708 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-05-13 21:39:48,095 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-05-13 21:39:48,459 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
