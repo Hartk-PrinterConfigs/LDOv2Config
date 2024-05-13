@@ -1,0 +1,28 @@
+:root {
+	  --v-anchor-base: #63666a;
+    --v-primary-base: #63666a;
+    --color-primary: #63666a;
+    --v-primary-lighten5: #d8d9da;
+    --v-primary-lighten4: #c1c2c3;
+    --v-primary-lighten3: #a9abad;
+    --v-primary-lighten2: #929497;
+    --v-primary-lighten1: #7a7d80;
+    --v-primary-darken1: #54575a;
+    --v-primary-darken2: #45474a;
+    --v-primary-darken3: #36383a;
+    --v-primary-darken4: #28292a;
+    --v-accent-base: #44d62c;
+    --v-warning-base: #44d62c;
+    --v-warning-base: #44d62c;
+    --v-accent-lighten5: #d0f5ca;
+    --v-accent-lighten4: #b4efab;
+    --v-accent-lighten3: #98e88b;
+    --v-accent-lighten2: #7ce26b;
+    --v-accent-lighten1: #60dc4c;
+    --v-accent-darken1: #3ab625;
+    --v-accent-darken2: #30961f;
+    --v-accent-darken3: #257618;
+    --v-accent-darken4: #1b5612;
+    --red--text: #44d62c;
+}
+
