@@ -12040,3 +12040,877 @@ Moonraker warnings:
 2024-05-13 20:21:19,477 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
 2024-05-13 20:21:24,417 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
 2024-05-13 20:21:24,479 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:32:38,222 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2024-05-13 21:32:38,240 [functions.py:log_start()] - KlipperScreen Version: v0.4.0-73-g1afc67b
+2024-05-13 21:32:38,240 [functions.py:log_start()] - Python version: 3.9
+2024-05-13 21:32:38,587 [config.py:get_config_file_location()] - Passed config (-c): .
+2024-05-13 21:32:38,594 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2024-05-13 21:32:38,607 [config.py:_include_config()] - Parsing files: ['/home/pi/KlipperScreen/config/main_menu.conf']
+2024-05-13 21:32:38,621 [config.py:log_config()] -  ===== Config File =====
+[menu __main]
+name = {{ gettext('Main Menu') }}
+
+[menu __main move]
+name = {{ gettext('Move') }}
+icon = move
+panel = move
+
+[menu __main temperature]
+name = {{ gettext('Temperature') }}
+icon = heat-up
+panel = temperature
+enable = {{ (printer.temperature_devices.count > 0) or (printer.extruders.count > 0)}}
+
+[menu __main extrude]
+name = {{ gettext('Extrude') }}
+icon = extrude
+panel = extrude
+enable = {{ printer.extruders.count > 0 }}
+
+[menu __main more]
+name = {{ gettext('More') }}
+icon = settings
+
+[menu __main print]
+name = {{ gettext('Print') }}
+icon = printer
+panel = print
+
+[menu __main more bedlevel]
+name = {{ gettext('Bed Level') }}
+icon = bed-level
+panel = bed_level
+enable = {{ 'bed_screws' in printer.config_sections or 'screws_tilt_adjust' in printer.config_sections }}
+
+[menu __main more bedmesh]
+name = {{ gettext('Bed Mesh') }}
+icon = bed-mesh
+panel = bed_mesh
+enable = {{ 'bed_mesh' in printer.config_sections }}
+
+[menu __main more zoffset]
+name = {{ gettext('Z Calibrate') }}
+icon = z-farther
+panel = zcalibrate
+
+[menu __main more limits]
+name = {{ gettext('Limits') }}
+icon = fine-tune
+panel = limits
+
+[menu __main more retraction]
+name = {{ gettext('Retraction') }}
+icon = retract
+panel = retraction
+enable = {{ 'firmware_retraction' in printer.config_sections }}
+
+[menu __main more fan]
+name = {{ gettext('Fan') }}
+icon = fan
+panel = fan
+enable = {{ printer.fans.count > 0 }}
+
+[menu __main more led]
+name = {{ gettext('Leds') }}
+icon = light
+panel = led
+enable = {{ printer.leds.count > 0 }}
+
+[menu __main more macros]
+name = {{ gettext('Macros') }}
+icon = custom-script
+panel = gcode_macros
+enable = {{ printer.gcode_macros.count > 0 }}
+
+[menu __main more pins]
+name = {{ gettext('Pins') }}
+icon = hashtag
+panel = pins
+enable = {{ printer.output_pins.count > 0 }}
+
+[menu __main more power]
+name = {{ gettext('Power') }}
+icon = shutdown
+panel = power
+enable = {{ moonraker.power_devices.count > 0 }}
+
+[menu __main more camera]
+name = {{ gettext('Camera') }}
+icon = camera
+panel = camera
+enable = {{ moonraker.cameras.count > 0 }}
+
+[menu __main more console]
+name = {{ gettext('Console') }}
+icon = console
+panel = console
+
+[menu __main more updater]
+name = {{ gettext('Update') }}
+icon = refresh
+panel = updater
+
+[menu __main more input_shaper]
+name = {{ gettext('Input Shaper') }}
+icon = move
+panel = input_shaper
+enable = {{ 'input_shaper' in printer.config_sections }}
+
+[menu __main more save]
+name = {{ gettext('Save Config') }}
+icon = complete
+method = printer.gcode.script
+params = {"script":"SAVE_CONFIG"}
+confirm = 
+	{{ gettext('Save configuration?') }}
+	
+	{{ gettext('Klipper will reboot') }}
+
+[menu __main more settings]
+name = KlipperScreen
+icon = settings
+panel = settings
+
+[menu __main more network]
+name = {{ gettext('Network') }}
+icon = network
+panel = network
+
+[menu __main more notifications]
+name = {{ gettext('Notifications') }}
+icon = notifications
+panel = notifications
+
+[menu __print notifications]
+name = {{ gettext('Notifications') }}
+icon = notifications
+panel = notifications
+
+[menu __main more spoolman]
+name = Spoolman
+icon = spoolman
+panel = spoolman
+enable = {{ moonraker.spoolman }}
+
+[menu __main more system]
+name = {{ gettext('System') }}
+icon = info
+panel = system
+enable = {{ moonraker_connected }}
+=======================
+2024-05-13 21:32:38,631 [config.py:_include_config()] - Parsing files: ['/home/pi/KlipperScreen/config/splash_menu.conf']
+2024-05-13 21:32:38,641 [config.py:log_config()] -  ===== Config File =====
+[menu __splashscreen]
+name = {{ gettext('Menu') }}
+
+[menu __splashscreen power]
+name = {{ gettext('Power') }}
+icon = shutdown
+panel = power
+enable = {{ moonraker.power_devices.count > 0 }}
+
+[menu __splashscreen network]
+name = {{ gettext('Network') }}
+icon = network
+panel = network
+
+[menu __splashscreen updater]
+name = {{ gettext('Update') }}
+icon = refresh
+panel = updater
+enable = {{ moonraker_connected }}
+
+[menu __splashscreen settings]
+name = KlipperScreen
+icon = settings
+panel = settings
+
+[menu __splashscreen system]
+name = {{ gettext('System') }}
+icon = info
+panel = system
+enable = {{ moonraker_connected }}
+=======================
+2024-05-13 21:32:38,645 [config.py:_include_config()] - Parsing files: ['/home/pi/KlipperScreen/config/print_menu.conf']
+2024-05-13 21:32:38,653 [config.py:log_config()] -  ===== Config File =====
+[menu __print]
+name = {{ gettext('Print Control') }}
+
+[menu __print temperature]
+name = {{ gettext('Temperature') }}
+icon = heat-up
+panel = temperature
+enable = {{ (printer.temperature_devices.count > 0) or (printer.extruders.count > 0)}}
+
+[menu __print fan]
+name = {{ gettext('Fan') }}
+icon = fan
+panel = fan
+enable = {{ printer.fans.count > 0 }}
+
+[menu __print move]
+name = {{ gettext('Move') }}
+icon = move
+panel = move
+enable = {{ printer.pause_resume.is_paused }}
+
+[menu __print extrude]
+name = {{ gettext('Extrude') }}
+icon = extrude
+panel = extrude
+enable = {{ printer.extruders.count > 0 }}
+
+[menu __print power]
+name = {{ gettext('Power') }}
+icon = shutdown
+panel = power
+enable = {{ moonraker.power_devices.count > 0 }}
+
+[menu __print led]
+name = {{ gettext('Leds') }}
+icon = light
+panel = led
+enable = {{ printer.leds.count > 0 }}
+
+[menu __print macros]
+name = {{ gettext('Macros') }}
+icon = custom-script
+panel = gcode_macros
+enable = {{ printer.gcode_macros.count > 0 }}
+
+[menu __print camera]
+name = {{ gettext('Camera') }}
+icon = camera
+panel = camera
+enable = {{ moonraker.cameras.count > 0 }}
+
+[menu __print console]
+name = {{ gettext('Console') }}
+icon = console
+panel = console
+
+[menu __print limits]
+name = {{ gettext('Limits') }}
+icon = fine-tune
+panel = limits
+
+[menu __print network]
+name = {{ gettext('Network') }}
+icon = network
+panel = network
+
+[menu __print retraction]
+name = {{ gettext('Retraction') }}
+icon = retract
+panel = retraction
+enable = {{ 'firmware_retraction' in printer.config_sections }}
+
+[menu __print settings]
+name = KlipperScreen
+icon = settings
+panel = settings
+
+[menu __print spoolman]
+name = Spoolman
+icon = spoolman
+panel = spoolman
+enable = {{ moonraker.spoolman }}
+
+[menu __print system]
+name = {{ gettext('System') }}
+icon = info
+panel = system
+enable = {{ moonraker_connected }}
+=======================
+2024-05-13 21:32:38,659 [config.py:_include_config()] - Parsing files: ['/home/pi/KlipperScreen/config/move_menu.conf']
+2024-05-13 21:32:38,668 [config.py:log_config()] -  ===== Config File =====
+[menu move homing homex]
+name = {{ gettext('Home X') }}
+icon = home-x
+method = printer.gcode.script
+params = {"script":"G28 X"}
+
+[menu move homing homey]
+name = {{ gettext('Home Y') }}
+icon = home-y
+method = printer.gcode.script
+params = {"script":"G28 Y"}
+
+[menu move homing homez]
+name = {{ gettext('Home Z') }}
+icon = home-z
+method = printer.gcode.script
+params = {"script":"G28 Z"}
+
+[menu move homing homeall]
+name = {{ gettext('Home All') }}
+icon = home
+method = printer.gcode.script
+params = {"script":"G28"}
+
+[menu move homing homexy]
+name = {{ gettext('Home XY') }}
+icon = home
+method = printer.gcode.script
+params = {"script":"G28 X Y"}
+
+[menu move homing quad_gantry_level]
+name = {{ gettext('Quad Gantry Level') }}
+icon = home-z
+method = printer.gcode.script
+params = {"script":"QUAD_GANTRY_LEVEL"}
+enable = {{ 'quad_gantry_level' in printer.config_sections }}
+
+[menu move homing Z-Tilt]
+name = {{ gettext('Z Tilt') }}
+icon = z-tilt
+method = printer.gcode.script
+params = {"script":"Z_TILT_ADJUST"}
+enable = {{ 'z_tilt' in printer.config_sections }}
+=======================
+2024-05-13 21:32:38,679 [config.py:log_config()] -  ===== Config File =====
+[main]
+confirm_estop = True
+
+[preheat PLA]
+bed = 40
+extruder = 205
+gcode = 
+	STATUS_HEATING
+
+[preheat ABS]
+bed = 110
+extruder = 250
+gcode = 
+	STATUS_HEATING
+=======================
+2024-05-13 21:32:38,684 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+theme = material-dark
+24htime = False
+confirm_estop = True
+autoclose_popups = False
+print_sort_dir = date_desc
+print_view = list
+
+=======================
+2024-05-13 21:32:38,685 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_api_key": ""
+    }
+  }
+]
+2024-05-13 21:32:38,877 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2024-05-13 21:32:38,877 [config.py:install_language()] - Using lang en
+2024-05-13 21:32:38,908 [screen.py:__init__()] - Monitors: 1 using number: 0
+2024-05-13 21:32:38,910 [screen.py:__init__()] - Wayland: False Display name: :0
+2024-05-13 21:32:38,914 [screen.py:__init__()] - Screen resolution: 800x480
+2024-05-13 21:32:38,915 [KlippyGtk.py:__init__()] - Font size: 16.6 (medium)
+2024-05-13 21:32:41,966 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2024-05-13 21:32:41,985 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2024-05-13 21:32:42,002 [screen.py:initial_connection()] - Default printer: None
+2024-05-13 21:32:42,103 [screen.py:connect_printer()] - Connecting to printer: Printer
+2024-05-13 21:32:42,105 [screen.py:_load_panel()] - Loading panel: splash_screen
+2024-05-13 21:32:42,232 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2024-05-13 21:32:42,254 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/info
+2024-05-13 21:32:42,275 [KlippyRest.py:_do_request()] - host=127.0.0.1, port=7125>>Max retries exceeded with url>>Failed to establish a new connection>>[Errno 111] Connection refused
+2024-05-13 21:32:42,276 [screen.py:connect_to_moonraker()] - Moonraker not connected
+2024-05-13 21:32:46,956 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/info
+2024-05-13 21:32:46,968 [KlippyRest.py:_do_request()] - host=127.0.0.1, port=7125>>Max retries exceeded with url>>Failed to establish a new connection>>[Errno 111] Connection refused
+2024-05-13 21:32:46,969 [screen.py:connect_to_moonraker()] - Moonraker not connected
+2024-05-13 21:32:50,955 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/info
+2024-05-13 21:32:50,978 [KlippyWebsocket.py:connect()] - Attempting to connect
+2024-05-13 21:32:50,979 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2024-05-13 21:32:50,999 [_logging.py:info()] - Websocket connected
+2024-05-13 21:32:51,000 [KlippyWebsocket.py:on_open()] - Moonraker Websocket Open
+2024-05-13 21:32:51,002 [screen.py:websocket_connected()] - ### websocket_connected
+2024-05-13 21:32:51,069 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2024-05-13 21:32:51,078 [screen.py:show_popup_message()] - warning: 
+Moonraker warnings:
+[server]:
+ Option 'enable_debug_logging' is deprecated, see the configuration documention at https:
+//moonraker.readthedocs.io/en/latest/configuration/
+[file_manager]:
+ Option 'config_path' is deprecated, see the configuration documention at https:
+//moonraker.readthedocs.io/en/latest/configuration/
+[update_manager]:
+ Option 'enable_repo_debug' is deprecated, see the configuration documention at https:
+//moonraker.readthedocs.io/en/latest/configuration/
+[authorization]:
+ Invalid domain name '172.17.0.15:
+80' in option 'trusted_clients'
+
+2024-05-13 21:32:51,114 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/webcams/list
+2024-05-13 21:32:51,144 [printer.py:configure_cameras()] - Cameras: []
+2024-05-13 21:32:51,144 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/info
+2024-05-13 21:32:51,174 [screen.py:init_klipper()] - Moonraker info {'klippy_connected': True, 'klippy_state': 'startup', 'components': ['secrets', 'template', 'klippy_connection', 'jsonrpc', 'internal_transport', 'application', 'websockets', 'dbus_manager', 'database', 'file_manager', 'klippy_apis', 'shell_command', 'machine', 'data_store', 'proc_stats', 'job_state', 'job_queue', 'http_client', 'announcements', 'webcam', 'extensions', 'update_manager', 'octoprint_compat', 'history', 'wled', 'authorization'], 'failed_components': [], 'registered_directories': ['config', 'logs', 'gcodes', 'config_examples', 'docs'], 'warnings': ["[server]: Option 'enable_debug_logging' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/", "[file_manager]: Option 'config_path' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/", "[update_manager]: Option 'enable_repo_debug' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/", "[authorization]: Invalid domain name '172.17.0.15:80' in option 'trusted_clients'"], 'websocket_count': 2, 'moonraker_version': 'v0.8.0-268-ga23187b', 'missing_klippy_requirements': [], 'api_version': [1, 4, 0], 'api_version_string': '1.4.0'}
+2024-05-13 21:32:51,174 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/printer/info
+2024-05-13 21:32:51,203 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/printer/objects/query?configfile
+2024-05-13 21:32:51,269 [printer.py:stop_tempstore_updates()] - Stopping tempstore
+2024-05-13 21:32:51,272 [printer.py:reinit()] - Klipper version: v0.12.0-85-gd785b396-dirty
+2024-05-13 21:32:51,273 [printer.py:reinit()] - # Extruders: 1
+2024-05-13 21:32:51,273 [printer.py:reinit()] - # Temperature devices: 5
+2024-05-13 21:32:51,273 [printer.py:reinit()] - # Fans: 4
+2024-05-13 21:32:51,274 [printer.py:reinit()] - # Output pins: 2
+2024-05-13 21:32:51,274 [printer.py:reinit()] - # Leds: 1
+2024-05-13 21:32:51,274 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/printer/gcode/help
+2024-05-13 21:32:51,317 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/machine/system_info
+2024-05-13 21:32:51,344 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/printer/objects/query?bed_mesh&configfile&display_status&extruder&fan&gcode_move&heater_bed&idle_timeout&pause_resume&print_stats&toolhead&virtual_sdcard&webhooks&motion_report&firmware_retraction&exclude_object&manual_probe&extruder&heater_bed&temperature_sensor mcu&temperature_sensor raspi&temperature_sensor toolhead&temperature_sensor chamber&fan&controller_fan my_controller_fan&fan_generic BedFans&heater_fan hotend_fan&output_pin hourCounter&output_pin act_led&neopixel sb_leds
+2024-05-13 21:32:51,535 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2024-05-13 21:32:51,535 [KlippyWebsocket.py:object_subscription()] - {'objects': {'bed_mesh': ['profile_name', 'mesh_max', 'mesh_min', 'probed_matrix', 'profiles'], 'configfile': ['config'], 'display_status': ['progress', 'message'], 'fan': ['speed'], 'gcode_move': ['extrude_factor', 'gcode_position', 'homing_origin', 'speed_factor', 'speed'], 'idle_timeout': ['state'], 'pause_resume': ['is_paused'], 'print_stats': ['print_duration', 'total_duration', 'filament_used', 'filename', 'state', 'message', 'info'], 'toolhead': ['homed_axes', 'estimated_print_time', 'print_time', 'position', 'extruder', 'max_accel', 'minimum_cruise_ratio', 'max_velocity', 'square_corner_velocity'], 'virtual_sdcard': ['file_position', 'is_active', 'progress'], 'webhooks': ['state', 'state_message'], 'firmware_retraction': ['retract_length', 'retract_speed', 'unretract_extra_length', 'unretract_speed'], 'motion_report': ['live_position', 'live_velocity', 'live_extruder_velocity'], 'exclude_object': ['current_object', 'objects', 'excluded_objects'], 'manual_probe': ['is_active'], 'screws_tilt_adjust': ['results', 'error'], 'extruder': ['target', 'temperature', 'pressure_advance', 'smooth_time', 'power'], 'heater_bed': ['target', 'temperature', 'power'], 'temperature_sensor mcu': ['temperature'], 'temperature_sensor raspi': ['temperature'], 'temperature_sensor toolhead': ['temperature'], 'temperature_sensor chamber': ['temperature'], 'controller_fan my_controller_fan': ['speed'], 'fan_generic BedFans': ['speed'], 'heater_fan hotend_fan': ['speed'], 'output_pin hourCounter': ['value'], 'output_pin act_led': ['value'], 'neopixel sb_leds': ['color_data']}}
+2024-05-13 21:32:51,538 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2024-05-13 21:32:51,540 [screen.py:init_klipper()] - Printer initialized
+2024-05-13 21:32:51,541 [printer.py:change_state()] - Changing state from 'disconnected' to 'startup'
+2024-05-13 21:32:51,542 [printer.py:change_state()] - Adding callback for state: startup
+2024-05-13 21:32:51,721 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2024-05-13 21:32:51,738 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2024-05-13 21:32:53,965 [printer.py:change_state()] - Changing state from 'startup' to 'ready'
+2024-05-13 21:32:53,966 [printer.py:change_state()] - Adding callback for state: ready
+2024-05-13 21:32:53,982 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2024-05-13 21:32:54,000 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2024-05-13 21:32:54,014 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2024-05-13 21:32:54,023 [screen.py:_load_panel()] - Loading panel: main_menu
+2024-05-13 21:32:54,214 [main_menu.py:__init__()] - ### Making MainMenu
+2024-05-13 21:32:54,259 [main_menu.py:add_device()] - Adding device: extruder
+2024-05-13 21:32:54,272 [main_menu.py:add_device()] - Adding device: heater_bed
+2024-05-13 21:32:54,283 [main_menu.py:add_device()] - Adding device: temperature_sensor mcu
+2024-05-13 21:32:54,294 [main_menu.py:add_device()] - Adding device: temperature_sensor raspi
+2024-05-13 21:32:54,304 [main_menu.py:add_device()] - Adding device: temperature_sensor toolhead
+2024-05-13 21:32:54,315 [main_menu.py:add_device()] - Adding device: temperature_sensor chamber
+2024-05-13 21:32:54,405 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2024-05-13 21:32:54,408 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:32:54,430 [screen.py:init_tempstore()] - Tempstore not ready: {} Retrying in 5 seconds
+2024-05-13 21:32:54,538 [heatergraph.py:draw_graph()] - Tempstore not initialized!
+2024-05-13 21:32:54,538 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:32:54,559 [screen.py:init_tempstore()] - Tempstore not ready: {} Retrying in 5 seconds
+2024-05-13 21:32:54,796 [screen.py:show_popup_message()] - echo: Backing-Up config, please wait...
+2024-05-13 21:32:54,833 [heatergraph.py:draw_graph()] - Tempstore not initialized!
+2024-05-13 21:32:54,834 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:32:54,850 [screen.py:init_tempstore()] - Tempstore not ready: {} Retrying in 5 seconds
+2024-05-13 21:32:54,911 [heatergraph.py:draw_graph()] - Tempstore not initialized!
+2024-05-13 21:32:54,912 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:32:54,929 [screen.py:init_tempstore()] - Tempstore not ready: {} Retrying in 5 seconds
+2024-05-13 21:32:54,973 [heatergraph.py:draw_graph()] - Tempstore not initialized!
+2024-05-13 21:32:54,973 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:32:55,010 [screen.py:init_tempstore()] - Tempstore not ready: {} Retrying in 5 seconds
+2024-05-13 21:32:55,042 [heatergraph.py:draw_graph()] - Tempstore not initialized!
+2024-05-13 21:32:55,043 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:32:55,059 [screen.py:init_tempstore()] - Tempstore not ready: {} Retrying in 5 seconds
+2024-05-13 21:33:14,919 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:15,066 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:15,072 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:15,129 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:15,133 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:15,189 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:15,192 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:15,245 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:15,248 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:15,300 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:15,303 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:15,353 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:19,904 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:19,966 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:19,968 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:20,040 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:20,901 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:20,956 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:20,959 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:21,008 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:21,010 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:21,057 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:21,060 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:21,107 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:24,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:24,957 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:24,960 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:25,010 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:25,903 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:25,970 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:25,972 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:26,025 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:26,028 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:26,080 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:26,083 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:26,135 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:29,901 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:29,955 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:29,958 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:30,010 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:30,900 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:30,953 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:30,955 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:31,007 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:31,010 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:31,057 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:31,060 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:31,108 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:34,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:34,952 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:34,954 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:35,008 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:35,903 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:36,011 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:36,013 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:36,061 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:36,063 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:36,110 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:36,113 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:36,160 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:39,903 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:39,977 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:39,980 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:40,053 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:40,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:40,954 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:40,960 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:41,021 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:41,025 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:41,105 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:41,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:41,951 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:44,900 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:44,948 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:44,954 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:45,003 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:45,901 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:45,957 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:45,964 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:46,016 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:46,022 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:46,074 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:46,900 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:46,962 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:49,898 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:49,947 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:49,950 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:50,003 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:50,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:50,948 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:50,951 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:51,004 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:51,007 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:51,057 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:51,903 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:52,009 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:54,901 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:54,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:54,958 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:55,009 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:55,898 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:55,947 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:55,950 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:56,006 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:56,008 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:56,060 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:56,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:56,948 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:59,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:33:59,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:33:59,953 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:00,030 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:00,900 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:00,956 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:00,959 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:01,024 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:01,027 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:01,087 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:01,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:01,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:04,900 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:04,956 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:04,958 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:05,006 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:05,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:05,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:05,951 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:06,000 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:06,003 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:06,054 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:06,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:06,948 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:09,906 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:09,990 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:09,996 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:10,098 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:10,900 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:10,954 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:10,958 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:11,008 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:11,010 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:11,060 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:11,898 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:11,948 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:14,898 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:14,947 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:14,950 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:15,000 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:15,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:15,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:15,952 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:16,021 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:16,025 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:16,104 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:16,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:16,953 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:19,898 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:19,948 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:19,951 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:20,001 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:20,907 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:20,962 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:20,965 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:21,015 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:21,017 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:21,066 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:21,901 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:21,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:24,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:24,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:24,952 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:25,001 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:25,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:25,973 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:25,977 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:26,044 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:26,046 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:26,096 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:26,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:26,951 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:29,900 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:29,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:29,953 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:30,002 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:30,901 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:30,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:30,952 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:31,002 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:31,005 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:31,081 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:31,903 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:31,955 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:34,910 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:34,961 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:34,964 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:35,012 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:35,901 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:35,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:35,952 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:36,002 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:36,004 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:36,054 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:36,913 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:37,000 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:39,904 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:39,955 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:39,957 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:40,025 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:40,905 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:40,959 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:40,962 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:41,012 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:41,015 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:41,064 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:41,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:41,957 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:44,905 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:44,997 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:44,999 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:45,049 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:45,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:45,956 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:45,963 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:46,031 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:46,033 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:46,112 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:46,900 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:46,958 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:49,898 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:49,953 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:49,956 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:50,029 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:50,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:50,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:50,953 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:51,003 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:51,007 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:51,056 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:51,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:51,953 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:54,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:54,953 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:54,956 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:55,005 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:55,907 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:56,007 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:56,009 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:56,059 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:56,061 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:56,112 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:56,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:56,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:59,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:34:59,948 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:34:59,950 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:00,008 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:00,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:00,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:00,952 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:01,025 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:01,030 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:01,105 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:01,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:01,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:04,898 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:04,954 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:04,956 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:05,015 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:05,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:05,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:05,952 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:06,006 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:06,008 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:06,058 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:06,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:06,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:09,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:09,951 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:09,953 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:10,025 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:10,902 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:10,952 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:10,955 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:11,009 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:11,012 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:11,062 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:11,903 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:11,988 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:14,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:14,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:14,951 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:15,002 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:15,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:15,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:15,951 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:16,029 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:16,034 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:16,098 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:16,902 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:16,964 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:19,904 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:20,001 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:20,005 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:20,060 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:20,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:20,948 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:20,951 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:21,002 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:21,008 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:21,059 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:21,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:21,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:24,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:24,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:24,952 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:25,001 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:25,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:25,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:25,953 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:26,003 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:26,005 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:26,060 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:26,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:26,949 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:29,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:29,952 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:29,956 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:30,008 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:30,899 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:30,950 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:30,952 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:31,003 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:31,006 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:31,063 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:31,496 [printer.py:change_state()] - Changing state from 'ready' to 'disconnected'
+2024-05-13 21:35:31,497 [printer.py:change_state()] - Adding callback for state: disconnected
+2024-05-13 21:35:31,525 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2024-05-13 21:35:31,570 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2024-05-13 21:35:31,612 [screen.py:state_disconnected()] - ### Going to disconnected
+2024-05-13 21:35:31,613 [printer.py:stop_tempstore_updates()] - Stopping tempstore
+2024-05-13 21:35:31,616 [screen.py:show_panel()] - Reinitializing panel
+2024-05-13 21:35:31,715 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2024-05-13 21:35:31,901 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:31,969 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:34,902 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:34,968 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:34,971 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:35,021 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:35,905 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:36,002 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:36,004 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:36,062 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:36,063 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:36,114 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:36,118 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/info
+2024-05-13 21:35:36,136 [screen.py:init_klipper()] - Moonraker info {'klippy_connected': True, 'klippy_state': 'startup', 'components': ['secrets', 'template', 'klippy_connection', 'jsonrpc', 'internal_transport', 'application', 'websockets', 'dbus_manager', 'database', 'file_manager', 'klippy_apis', 'shell_command', 'machine', 'data_store', 'proc_stats', 'job_state', 'job_queue', 'http_client', 'announcements', 'webcam', 'extensions', 'update_manager', 'octoprint_compat', 'history', 'wled', 'authorization'], 'failed_components': [], 'registered_directories': ['config', 'logs', 'gcodes', 'config_examples', 'docs'], 'warnings': ["[server]: Option 'enable_debug_logging' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/", "[file_manager]: Option 'config_path' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/", "[update_manager]: Option 'enable_repo_debug' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/", "[authorization]: Invalid domain name '172.17.0.15:80' in option 'trusted_clients'"], 'websocket_count': 2, 'moonraker_version': 'v0.8.0-268-ga23187b', 'missing_klippy_requirements': [], 'api_version': [1, 4, 0], 'api_version_string': '1.4.0'}
+2024-05-13 21:35:36,137 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/printer/info
+2024-05-13 21:35:36,157 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/printer/objects/query?configfile
+2024-05-13 21:35:36,282 [printer.py:stop_tempstore_updates()] - Stopping tempstore
+2024-05-13 21:35:36,285 [printer.py:reinit()] - Klipper version: v0.12.0-85-gd785b396-dirty
+2024-05-13 21:35:36,285 [printer.py:reinit()] - # Extruders: 1
+2024-05-13 21:35:36,285 [printer.py:reinit()] - # Temperature devices: 5
+2024-05-13 21:35:36,285 [printer.py:reinit()] - # Fans: 4
+2024-05-13 21:35:36,285 [printer.py:reinit()] - # Output pins: 2
+2024-05-13 21:35:36,286 [printer.py:reinit()] - # Leds: 1
+2024-05-13 21:35:36,286 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/printer/gcode/help
+2024-05-13 21:35:36,310 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/machine/system_info
+2024-05-13 21:35:36,332 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/printer/objects/query?bed_mesh&configfile&display_status&extruder&fan&gcode_move&heater_bed&idle_timeout&pause_resume&print_stats&toolhead&virtual_sdcard&webhooks&motion_report&firmware_retraction&exclude_object&manual_probe&extruder&heater_bed&temperature_sensor mcu&temperature_sensor raspi&temperature_sensor toolhead&temperature_sensor chamber&fan&controller_fan my_controller_fan&fan_generic BedFans&heater_fan hotend_fan&output_pin hourCounter&output_pin act_led&neopixel sb_leds
+2024-05-13 21:35:36,537 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2024-05-13 21:35:36,538 [KlippyWebsocket.py:object_subscription()] - {'objects': {'bed_mesh': ['profile_name', 'mesh_max', 'mesh_min', 'probed_matrix', 'profiles'], 'configfile': ['config'], 'display_status': ['progress', 'message'], 'fan': ['speed'], 'gcode_move': ['extrude_factor', 'gcode_position', 'homing_origin', 'speed_factor', 'speed'], 'idle_timeout': ['state'], 'pause_resume': ['is_paused'], 'print_stats': ['print_duration', 'total_duration', 'filament_used', 'filename', 'state', 'message', 'info'], 'toolhead': ['homed_axes', 'estimated_print_time', 'print_time', 'position', 'extruder', 'max_accel', 'minimum_cruise_ratio', 'max_velocity', 'square_corner_velocity'], 'virtual_sdcard': ['file_position', 'is_active', 'progress'], 'webhooks': ['state', 'state_message'], 'firmware_retraction': ['retract_length', 'retract_speed', 'unretract_extra_length', 'unretract_speed'], 'motion_report': ['live_position', 'live_velocity', 'live_extruder_velocity'], 'exclude_object': ['current_object', 'objects', 'excluded_objects'], 'manual_probe': ['is_active'], 'screws_tilt_adjust': ['results', 'error'], 'extruder': ['target', 'temperature', 'pressure_advance', 'smooth_time', 'power'], 'heater_bed': ['target', 'temperature', 'power'], 'temperature_sensor mcu': ['temperature'], 'temperature_sensor raspi': ['temperature'], 'temperature_sensor toolhead': ['temperature'], 'temperature_sensor chamber': ['temperature'], 'controller_fan my_controller_fan': ['speed'], 'fan_generic BedFans': ['speed'], 'heater_fan hotend_fan': ['speed'], 'output_pin hourCounter': ['value'], 'output_pin act_led': ['value'], 'neopixel sb_leds': ['color_data']}}
+2024-05-13 21:35:36,539 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2024-05-13 21:35:36,540 [screen.py:init_klipper()] - Printer initialized
+2024-05-13 21:35:36,541 [printer.py:change_state()] - Changing state from 'disconnected' to 'startup'
+2024-05-13 21:35:36,541 [printer.py:change_state()] - Adding callback for state: startup
+2024-05-13 21:35:36,556 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2024-05-13 21:35:36,569 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2024-05-13 21:35:36,928 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:36,981 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:39,677 [printer.py:change_state()] - Changing state from 'startup' to 'ready'
+2024-05-13 21:35:39,677 [printer.py:change_state()] - Adding callback for state: ready
+2024-05-13 21:35:39,693 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2024-05-13 21:35:39,710 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2024-05-13 21:35:39,724 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2024-05-13 21:35:39,729 [screen.py:show_panel()] - Reinitializing panel
+2024-05-13 21:35:39,860 [main_menu.py:__init__()] - ### Making MainMenu
+2024-05-13 21:35:39,892 [main_menu.py:add_device()] - Adding device: extruder
+2024-05-13 21:35:39,901 [main_menu.py:add_device()] - Adding device: heater_bed
+2024-05-13 21:35:39,909 [main_menu.py:add_device()] - Adding device: temperature_sensor mcu
+2024-05-13 21:35:39,918 [main_menu.py:add_device()] - Adding device: temperature_sensor raspi
+2024-05-13 21:35:39,931 [main_menu.py:add_device()] - Adding device: temperature_sensor toolhead
+2024-05-13 21:35:39,945 [main_menu.py:add_device()] - Adding device: temperature_sensor chamber
+2024-05-13 21:35:40,043 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2024-05-13 21:35:40,091 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:40,153 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:40,156 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:40,234 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:40,480 [screen.py:show_popup_message()] - echo: Backing-Up config, please wait...
+2024-05-13 21:35:40,974 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:41,030 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:41,034 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:41,096 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:41,100 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:41,176 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:41,903 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:41,959 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:45,905 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:45,961 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:45,964 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:46,019 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:46,023 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:46,124 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:46,127 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
+2024-05-13 21:35:46,177 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-13 21:35:46,912 [KlippyRest.py:_do_request()] - Sending get to http://127.0.0.1:7125/server/temperature_store
