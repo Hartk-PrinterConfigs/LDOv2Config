@@ -2708,3 +2708,479 @@ Properties:
 2024-05-18 23:36:33,570 [klippy_connection.py:_check_ready()] - Klippy ready
 2024-05-18 23:36:33,615 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
 2024-05-18 23:36:34,054 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
+2024-05-18 23:36:56,044 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 18.38ms
+2024-05-18 23:37:26,035 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.94ms
+2024-05-18 23:37:56,037 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 6.93ms
+2024-05-18 23:38:26,033 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.07ms
+2024-05-18 23:38:56,033 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.05ms
+2024-05-18 23:39:26,036 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.61ms
+2024-05-18 23:39:56,036 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.23ms
+2024-05-18 23:40:26,032 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.06ms
+2024-05-18 23:40:56,037 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.60ms
+2024-05-18 23:41:26,039 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.12ms
+2024-05-18 23:41:56,040 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.36ms
+2024-05-18 23:42:26,044 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 3.85ms
+2024-05-18 23:42:56,040 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 3.94ms
+2024-05-18 23:43:26,042 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.30ms
+2024-05-18 23:43:56,042 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.05ms
+2024-05-18 23:44:26,041 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 3.94ms
+2024-05-18 23:44:56,045 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 3.83ms
+2024-05-18 23:45:26,044 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 3.95ms
+2024-05-18 23:45:56,049 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.96ms
+2024-05-18 23:46:26,047 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.80ms
+2024-05-18 23:46:56,050 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.27ms
+2024-05-18 23:47:26,049 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.04ms
+2024-05-18 23:47:56,049 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.06ms
+2024-05-18 23:48:26,055 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.14ms
+2024-05-18 23:48:56,050 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.14ms
+2024-05-18 23:49:26,050 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.12ms
+2024-05-18 23:49:56,053 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.05ms
+2024-05-18 23:50:26,052 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.25ms
+2024-05-18 23:50:56,055 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.37ms
+2024-05-18 23:51:26,058 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.16ms
+2024-05-18 23:51:56,064 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.54ms
+2024-05-18 23:52:26,063 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.06ms
+2024-05-18 23:52:56,058 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.40ms
+2024-05-18 23:53:26,061 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.84ms
+2024-05-18 23:53:56,060 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.27ms
+2024-05-18 23:54:26,063 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 6.26ms
+2024-05-18 23:54:56,064 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.20ms
+2024-05-18 23:55:26,068 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.28ms
+2024-05-18 23:55:56,066 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 5.17ms
+2024-05-18 23:56:26,066 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 4.75ms
+2024-05-18 23:56:37,147 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-05-18 23:56:37,259 [websockets.py:write_to_socket()] - Websocket closed while writing: 547694175616
+2024-05-18 23:56:37,259 [websockets.py:on_close()] - Websocket Closed: ID: 547694175616 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.23
+2024-05-18 23:56:37,268 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-05-18 23:56:37,755 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+gcode_metadata:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 4
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 5
+overflow_pages: 0
+entries: 14
+mainsail:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 2
+overflow_pages: 0
+entries: 9
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 6
+entries: 5
+2024-05-18 23:56:37,909 [server.py:main()] - Server Shutdown
+-------------------- Log Start | Sat May 18 22:57:02 2024 --------------------
+data_path: /home/pi/printer_data
+is_default_data_path: False
+config_file: /home/pi/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: True
+instance_uuid: 215a8ff9406149558f7a7b86cec4267d
+unix_socket_path: /home/pi/printer_data/comms/moonraker.sock
+software_version: v0.8.0-268-ga23187b
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: []
+unofficial_components: []
+log_file: /home/pi/printer_data/logs/moonraker.log
+python_version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+launch_args: /home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/__main__.py
+msgspec_enabled: False
+uvloop_enabled: False
+2024-05-18 23:57:02,330 [confighelper.py:read_file()] - Configuration File '/home/pi/printer_data/config/moonraker.conf' parsed, total size: 1762 B
+2024-05-18 23:57:02,331 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+enable_debug_logging = False
+max_upload_size = 1024
+klippy_uds_address = home/pi/printer_data/comms/klippy.sock
+
+[file_manager]
+config_path = ~/printer_data/config
+enable_object_processing = True
+
+[authorization]
+cors_domains = 
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://app.fluidd.xyz
+	http://*.local
+	http://*.lan
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.1.0/24
+	172.16.0.0/24
+	172.17.0.15:80
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[update_manager]
+refresh_interval = 168
+enable_auto_refresh = True
+enable_repo_debug = True
+
+[update_manager mainsail]
+type = web
+repo = mainsail-crew/mainsail
+path = ~/mainsail
+
+[update_manager beacon]
+type = git_repo
+channel = dev
+path = ~/beacon_klipper
+origin = https://github.com/beacon3d/beacon_klipper.git
+env = ~/klippy-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+is_system_service = False
+managed_services = klipper
+info_tags = 
+	desc=Beacon Surface Scanner
+
+[wled lights]
+type = http
+address = 192.168.1.7
+initial_preset = 2
+initial_red = 1
+initial_green = 1
+initial_blue = 1
+chain_count = 115
+
+#################################################################
+All Configuration Files:
+/home/pi/printer_data/config/moonraker.conf
+#################################################################
+2024-05-18 23:57:02,331 [server.py:add_warning()] - [server]: Option 'enable_debug_logging' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/
+2024-05-18 23:57:02,742 [server.py:load_component()] - Component (secrets) loaded
+2024-05-18 23:57:02,768 [server.py:load_component()] - Component (template) loaded
+2024-05-18 23:57:02,788 [server.py:load_component()] - Component (klippy_connection) loaded
+2024-05-18 23:57:04,710 [server.py:load_component()] - Component (application) loaded
+2024-05-18 23:57:04,775 [server.py:load_component()] - Component (websockets) loaded
+2024-05-18 23:57:04,924 [server.py:load_component()] - Component (dbus_manager) loaded
+2024-05-18 23:57:04,989 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 6
+2024-05-18 23:57:05,007 [server.py:load_component()] - Component (database) loaded
+2024-05-18 23:57:05,051 [file_manager.py:__init__()] - Using File System Observer: inotify
+2024-05-18 23:57:05,148 [server.py:add_warning()] - [file_manager]: Option 'config_path' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/
+2024-05-18 23:57:05,157 [server.py:load_component()] - Component (file_manager) loaded
+2024-05-18 23:57:05,168 [server.py:load_component()] - Component (klippy_apis) loaded
+2024-05-18 23:57:05,744 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 9, 2, 'final', 0)
+  version_string: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: 735411d3
+  hardware_desc: BCM2835
+  model: Raspberry Pi 3 Model B Plus Rev 1.3
+  total_memory: 880328
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 27
+  manufacturer: Unknown
+  oem_id: 5048
+  product_name: SD32G
+  product_revision: 6.0
+  serial_number: 79550c64
+  manufacturer_date: 8/2021
+  capacity: 28.8 GiB
+  total_bytes: 30941380608
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {'name': 'MainsailOS', 'version_id': '1.3.2', 'codename': 'bullseye', 'id': 'mainsailos'}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+2024-05-18 23:57:05,752 [server.py:load_component()] - Component (shell_command) loaded
+2024-05-18 23:57:05,752 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2024-05-18 23:57:05,765 [server.py:load_component()] - Component (machine) loaded
+2024-05-18 23:57:05,771 [server.py:load_component()] - Component (data_store) loaded
+2024-05-18 23:57:05,779 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
+2024-05-18 23:57:05,781 [server.py:load_component()] - Component (proc_stats) loaded
+2024-05-18 23:57:05,784 [server.py:load_component()] - Component (job_state) loaded
+2024-05-18 23:57:05,795 [server.py:load_component()] - Component (job_queue) loaded
+2024-05-18 23:57:05,813 [server.py:load_component()] - Component (http_client) loaded
+2024-05-18 23:57:05,826 [server.py:load_component()] - Component (announcements) loaded
+2024-05-18 23:57:05,835 [server.py:load_component()] - Component (webcam) loaded
+2024-05-18 23:57:05,842 [server.py:load_component()] - Component (extensions) loaded
+2024-05-18 23:57:05,856 [server.py:load_component()] - Component (octoprint_compat) loaded
+2024-05-18 23:57:05,930 [server.py:add_warning()] - [authorization]: Invalid domain name '172.17.0.15:80' in option 'trusted_clients'
+2024-05-18 23:57:05,931 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.1.0/24
+172.16.0.0/24
+fe80::/10
+::1/128
+CORS Domains:
+https://my\.mainsail\.xyz
+http://my\.mainsail\.xyz
+http://app\.fluidd\.xyz
+http://.*\.local
+http://.*\.lan
+2024-05-18 23:57:05,942 [server.py:load_component()] - Component (authorization) loaded
+2024-05-18 23:57:05,975 [wled.py:__init__()] - WLED component loading strips: ['wled lights']
+2024-05-18 23:57:05,975 [wled.py:__init__()] - WLED strip: lights
+2024-05-18 23:57:05,984 [server.py:load_component()] - Component (wled) loaded
+2024-05-18 23:57:05,994 [server.py:load_component()] - Component (history) loaded
+2024-05-18 23:57:06,105 [server.py:add_warning()] - [update_manager]: Option 'enable_repo_debug' is deprecated, see the configuration documention at https://moonraker.readthedocs.io/en/latest/configuration/
+2024-05-18 23:57:06,110 [base_deploy.py:log_info()] - Git Repo moonraker: Detected virtualenv: /home/pi/moonraker-env
+2024-05-18 23:57:06,129 [base_deploy.py:log_info()] - Git Repo klipper: Detected virtualenv: /home/pi/klippy-env
+2024-05-18 23:57:06,137 [base_deploy.py:log_info()] - Git Repo beacon: Option 'env' is deprecated, use 'virtualenv' instead.
+2024-05-18 23:57:06,139 [base_deploy.py:log_info()] - Git Repo beacon: Detected virtualenv: /home/pi/klippy-env
+2024-05-18 23:57:06,150 [server.py:load_component()] - Component (update_manager) loaded
+2024-05-18 23:57:06,162 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2024-05-18 23:57:06,187 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2024-05-18 23:57:06,243 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+2024-05-18 23:57:06,244 [machine.py:validation_init()] - Installation version in database up to date
+2024-05-18 23:57:07,211 [machine.py:check_virt_status()] - No Virtualization Detected
+2024-05-18 23:57:07,244 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.28
+2024-05-18 23:57:07,251 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.1.28
+2024-05-18 23:57:07,383 [server.py:add_log_rollover_item()] - 
+Systemd unit moonraker.service:
+unit_name: moonraker.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['network-online.target', 'system.slice', 'sysinit.target']
+**After=['system.slice', 'network-online.target', 'sysinit.target', 'systemd-journald.socket', 'basic.target', 'klipper.service']
+**SupplementaryGroups=['moonraker-admin']
+**EnvironmentFiles=/home/pi/printer_data/systemd/moonraker.env
+**ExecStart=/home/pi/moonraker-env/bin/python $MOONRAKER_ARGS
+**WorkingDirectory=
+**FragmentPath=/etc/systemd/system/moonraker.service
+**Description=API Server for Klipper SV1
+**User=pi
+2024-05-18 23:57:07,384 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2024-05-18 23:57:07,384 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2024-05-18 23:57:07,387 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2024-05-18 23:57:07,388 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.1.28
+2024-05-18 23:57:07,389 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+2024-05-18 23:57:07,390 [server.py:add_log_rollover_item()] - 
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['system.slice', '-.mount', 'sysinit.target']
+**After=['systemd-journald.socket', 'network-online.target', 'system.slice', 'basic.target', '-.mount', 'sysinit.target']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
+**ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/pi/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=pi
+2024-05-18 23:57:07,390 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2024-05-18 23:57:07,391 [server.py:_initialize_component()] - Performing Component Post Init: [wled]
+2024-05-18 23:57:07,393 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+2024-05-18 23:57:07,397 [server.py:_initialize_component()] - Performing Component Post Init: [update_manager]
+2024-05-18 23:57:08,631 [base_deploy.py:log_info()] - PackageDeploy: PackageKit Provider Configured
+2024-05-18 23:57:08,680 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
+Owner: Arksine
+Repository Name: moonraker
+Path: /home/pi/moonraker
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Arksine/moonraker.git
+Recovery URL: https://github.com/Arksine/moonraker.git
+Current Commit SHA: a23187b4afa632da8a90cb9eae83f0f6a5eec903
+Upstream Commit SHA: ba9428558adc70ed8cb3cdcea1723358ead23741
+Current Version: v0.8.0-268-ga23187b4
+Upstream Version: v0.8.0-354-gba942855
+Rollback Commit: a23187b4afa632da8a90cb9eae83f0f6a5eec903
+Rollback Branch: master
+Rollback Version: v0.8.0-268-ga23187b4
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 86
+Diverged: False
+Repo Warnings:
+  Repo has untracked source files: ['moonraker/components/timelapse.py']
+  Multiple instances of Moonraker managing this repo:
+  moonraker@37c893792c5e4af3a65b8dfa892580af
+  moonraker@215a8ff9406149558f7a7b86cec4267d
+2024-05-18 23:57:08,734 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+Owner: Klipper3d
+Repository Name: klipper
+Path: /home/pi/klipper
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Klipper3d/klipper.git
+Recovery URL: https://github.com/Klipper3d/klipper.git
+Current Commit SHA: d785b396a72b57c073ce5bdf7a9d5e9fe39fc914
+Upstream Commit SHA: 434770eaf9d382cccba203a3475ace2dc0653d7b
+Current Version: v0.12.0-85-gd785b396
+Upstream Version: v0.12.0-179-g434770ea
+Rollback Commit: d785b396a72b57c073ce5bdf7a9d5e9fe39fc914
+Rollback Branch: master
+Rollback Version: v0.12.0-85-gd785b396
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 94
+Diverged: False
+Repo Warnings:
+  Multiple instances of Moonraker managing this repo:
+  moonraker@37c893792c5e4af3a65b8dfa892580af
+  moonraker@215a8ff9406149558f7a7b86cec4267d
+2024-05-18 23:57:08,748 [web_deploy.py:_log_client_info()] - Web Client mainsail Detected:
+Repo: mainsail-crew/mainsail
+Channel: stable
+Path: /home/pi/mainsail
+Local Version: v2.9.1
+Remote Version: v2.11.2
+Valid: True
+Fallback Client Detected: False
+Pre-release: False
+Download Url: https://github.com/mainsail-crew/mainsail/releases/download/v2.11.2/mainsail.zip
+Download Size: 2114797
+Content Type: application/zip
+Rollback Version: v2.9.1
+Rollback Repo: mainsail-crew/mainsail
+2024-05-18 23:57:08,807 [git_deploy.py:log_repo_info()] - Git Repo beacon Detected:
+Owner: beacon3d
+Repository Name: beacon_klipper
+Path: /home/pi/beacon_klipper
+Remote: origin
+Branch: master
+Remote URL: https://github.com/beacon3d/beacon_klipper.git
+Recovery URL: https://github.com/beacon3d/beacon_klipper.git
+Current Commit SHA: b89bbbec0d94c92ba709a1da283afd0a5eb2c19e
+Upstream Commit SHA: b89bbbec0d94c92ba709a1da283afd0a5eb2c19e
+Current Version: v1.0.0-35-gb89bbbec
+Upstream Version: v1.0.0-35-gb89bbbec
+Rollback Commit: b89bbbec0d94c92ba709a1da283afd0a5eb2c19e
+Rollback Branch: master
+Rollback Version: v1.0.0-35-gb89bbbec
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Repo Warnings:
+  Multiple instances of Moonraker managing this repo:
+  moonraker@37c893792c5e4af3a65b8dfa892580af
+  moonraker@215a8ff9406149558f7a7b86cec4267d
+2024-05-18 23:57:08,811 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/pi/printer_data/comms/moonraker.sock'
+2024-05-18 23:57:08,813 [base_deploy.py:log_info()] - PackageKit: Next refresh in: 6 Hours, 52 Minutes, 58 Seconds
+2024-05-18 23:57:08,814 [base_deploy.py:log_info()] - Git Repo moonraker: Next refresh in: 6 Hours, 53 Minutes, 9 Seconds
+2024-05-18 23:57:08,814 [base_deploy.py:log_info()] - Git Repo klipper: Next refresh in: 6 Hours, 53 Minutes, 20 Seconds
+2024-05-18 23:57:08,814 [base_deploy.py:log_info()] - Web Client mainsail: Next refresh in: 15 Hours, 57 Minutes, 31 Seconds
+2024-05-18 23:57:08,815 [base_deploy.py:log_info()] - Git Repo beacon: Next refresh in: 16 Hours, 12 Minutes, 7 Seconds
+2024-05-18 23:57:08,815 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: mainsailos
+2024-05-18 23:57:08,819 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2024-05-18 23:57:09,072 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-05-18 23:57:09,194 [server.py:add_log_rollover_item()] - 
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['-.mount', 'sysinit.target', 'system.slice']
+**After=['basic.target', '-.mount', 'systemd-journald.socket', 'system.slice', 'network-online.target', 'sysinit.target']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
+**ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/pi/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=pi
+2024-05-18 23:57:09,452 [server.py:add_log_rollover_item()] - Klipper Version: v0.12.0-85-gd785b396-dirty
+2024-05-18 23:57:09,580 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.149
+2024-05-18 23:57:11,687 [application.py:log_request()] - 404 GET /server/files/metadata?filename= (192.168.1.149) [_TRUSTED_USER_] 40.50ms
+2024-05-18 23:57:12,054 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2024-05-18 23:57:12,075 [application.py:log_request()] - 101 GET /websocket?token= (127.0.0.1) [_TRUSTED_USER_] 3.98ms
+2024-05-18 23:57:12,076 [websockets.py:open()] - Websocket Opened: ID: 547822345520, Proxied: False, User Agent: , Host Name: 127.0.0.1
+2024-05-18 23:57:12,150 [websockets.py:_handle_identify()] - Websocket 547822345520 Client Identified - Name: KlipperScreen, Version: v0.4.0-73-g1afc67b, Type: display
+2024-05-18 23:57:14,346 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-05-18 23:57:14,354 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-05-18 23:57:14,597 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-05-18 23:57:14,869 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-05-18 23:57:14,917 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2024-05-18 23:57:29,767 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor mcu', 'temperature_sensor raspi', 'temperature_sensor toolhead', 'temperature_sensor chamber', 'temperature_sensor beacon_coil', 'extruder']
