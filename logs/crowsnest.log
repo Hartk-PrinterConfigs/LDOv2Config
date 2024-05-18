@@ -1270,3 +1270,113 @@
 [05/18/24 12:17:28] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
 [05/18/24 12:17:28] crowsnest: INFO: Detect available Devices
 [05/18/24 12:17:29] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 12:17:35] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 12:17:35] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 12:17:35] crowsnest: Prepare Startup ...
+[05/18/24 12:17:35] crowsnest: INFO: Checking Dependencies
+[05/18/24 12:17:35] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 12:17:35] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 12:17:36] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 12:17:36] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 12:17:36] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 12:17:36] crowsnest: INFO: Detect available Devices
+[05/18/24 12:17:36] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 13:33:16] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 13:33:16] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 13:33:16] crowsnest: Prepare Startup ...
+[05/18/24 13:33:16] crowsnest: INFO: Checking Dependencies
+[05/18/24 13:33:16] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 13:33:16] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 13:33:16] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 13:33:16] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 13:33:17] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 13:33:17] crowsnest: INFO: Detect available Devices
+[05/18/24 13:33:17] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 13:33:23] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 13:33:23] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 13:33:23] crowsnest: Prepare Startup ...
+[05/18/24 13:33:23] crowsnest: INFO: Checking Dependencies
+[05/18/24 13:33:23] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 13:33:23] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 13:33:23] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 13:33:23] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 13:33:23] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 13:33:23] crowsnest: INFO: Detect available Devices
+[05/18/24 13:33:24] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 13:33:30] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 13:33:30] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 13:33:30] crowsnest: Prepare Startup ...
+[05/18/24 13:33:30] crowsnest: INFO: Checking Dependencies
+[05/18/24 13:33:30] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 13:33:30] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 13:33:30] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 13:33:30] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 13:33:30] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 13:33:30] crowsnest: INFO: Detect available Devices
+[05/18/24 13:33:30] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 13:33:37] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 13:33:37] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 13:33:37] crowsnest: Prepare Startup ...
+[05/18/24 13:33:37] crowsnest: INFO: Checking Dependencies
+[05/18/24 13:33:37] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 13:33:37] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 13:33:37] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 13:33:37] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 13:33:37] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 13:33:37] crowsnest: INFO: Detect available Devices
+[05/18/24 13:33:37] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 13:33:44] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 13:33:44] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 13:33:44] crowsnest: Prepare Startup ...
+[05/18/24 13:33:44] crowsnest: INFO: Checking Dependencies
+[05/18/24 13:33:44] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 13:33:44] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 13:33:44] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 13:33:44] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 13:33:44] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 13:33:44] crowsnest: INFO: Detect available Devices
+[05/18/24 13:33:44] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 13:33:50] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 13:33:50] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 13:33:50] crowsnest: Prepare Startup ...
+[05/18/24 13:33:50] crowsnest: INFO: Checking Dependencies
+[05/18/24 13:33:51] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 13:33:51] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 13:33:51] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 13:33:51] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 13:33:51] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 13:33:51] crowsnest: INFO: Detect available Devices
+[05/18/24 13:33:51] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 13:33:58] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 13:33:58] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 13:33:58] crowsnest: Prepare Startup ...
+[05/18/24 13:33:58] crowsnest: INFO: Checking Dependencies
+[05/18/24 13:33:58] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 13:33:58] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 13:33:58] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 13:33:58] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 13:33:58] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 13:33:58] crowsnest: INFO: Detect available Devices
+[05/18/24 13:33:58] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 23:36:20] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 23:36:20] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 23:36:21] crowsnest: Prepare Startup ...
+[05/18/24 23:36:21] crowsnest: INFO: Checking Dependencies
+[05/18/24 23:36:21] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 23:36:21] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 23:36:21] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 23:36:21] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 23:36:21] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 23:36:21] crowsnest: INFO: Detect available Devices
+[05/18/24 23:36:23] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
+[05/18/24 23:36:29] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[05/18/24 23:36:29] crowsnest: Version: v4.1.3-1-gc0c9c41
+[05/18/24 23:36:29] crowsnest: Prepare Startup ...
+[05/18/24 23:36:29] crowsnest: INFO: Checking Dependencies
+[05/18/24 23:36:29] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[05/18/24 23:36:29] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[05/18/24 23:36:30] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[05/18/24 23:36:30] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[05/18/24 23:36:30] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[05/18/24 23:36:30] crowsnest: INFO: Detect available Devices
+[05/18/24 23:36:30] crowsnest: ERROR: No usable Devices Found. Stopping crowsnest.
