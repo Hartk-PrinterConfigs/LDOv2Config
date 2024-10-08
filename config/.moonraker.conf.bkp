@@ -4,11 +4,9 @@ port = 7125
 max_upload_size = 1024
 klippy_uds_address = home/pi/printer_data/comms/klippy.sock
 
-[file_manager]
-enable_object_processing = True
-
 [authorization]
 cors_domains = 
+	https://www.dsk3dprinting.com
 	https://my.mainsail.xyz
 	http://my.mainsail.xyz
 	http://app.fluidd.xyz
@@ -64,4 +62,7 @@ type = web
 channel = stable
 repo = fluidd-core/fluidd
 path = ~/fluidd
+
+[file_manager]
+enable_object_processing = True
 
