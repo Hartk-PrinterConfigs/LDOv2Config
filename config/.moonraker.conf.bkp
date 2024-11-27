@@ -66,3 +66,11 @@ path = ~/fluidd
 [file_manager]
 enable_object_processing = True
 
+[update_manager afc-software]
+type = git_repo
+path = ~/AFC-Klipper-Add-On
+origin = https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
+managed_services = klipper moonraker
+primary_branch = main
+install_script = install-afc.sh
+
