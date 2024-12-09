@@ -7,7 +7,7 @@
             "weight": 0,
             "command": null,
             "index": 1,
-            "tool_loaded": false,
+            "tool_loaded": true,
             "hub_loaded": true
         },
         "leg2": {
