@@ -7,8 +7,8 @@
             "weight": 0,
             "command": null,
             "index": 1,
-            "tool_loaded": true,
-            "hub_loaded": true
+            "tool_loaded": false,
+            "hub_loaded": false
         },
         "leg2": {
             "spool_id": "",
@@ -28,7 +28,7 @@
             "command": null,
             "index": 3,
             "tool_loaded": false,
-            "hub_loaded": true
+            "hub_loaded": false
         },
         "leg4": {
             "spool_id": "",
