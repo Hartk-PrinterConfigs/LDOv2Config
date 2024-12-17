@@ -28,7 +28,7 @@
             "command": null,
             "index": 3,
             "tool_loaded": false,
-            "hub_loaded": false
+            "hub_loaded": true
         },
         "leg4": {
             "spool_id": "",
