@@ -17,7 +17,7 @@
             "weight": 0,
             "command": null,
             "index": 2,
-            "tool_loaded": true,
+            "tool_loaded": false,
             "hub_loaded": true
         },
         "leg3": {
@@ -27,7 +27,7 @@
             "weight": 0,
             "command": null,
             "index": 3,
-            "tool_loaded": false,
+            "tool_loaded": true,
             "hub_loaded": true
         },
         "leg4": {
