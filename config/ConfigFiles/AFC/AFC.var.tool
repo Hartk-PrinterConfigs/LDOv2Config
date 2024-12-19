@@ -1,5 +1,5 @@
 {
     "extruder": {
-        "lane_loaded": "leg2"
+        "lane_loaded": ""
     }
 }
