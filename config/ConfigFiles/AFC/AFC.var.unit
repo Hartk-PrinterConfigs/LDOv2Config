@@ -63,7 +63,7 @@
             "map": "T9",
             "index": 1,
             "tool_loaded": false,
-            "hub_loaded": false,
+            "hub_loaded": true,
             "status": ""
         },
         "leg6": {
@@ -75,7 +75,7 @@
             "map": "T10",
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": false,
+            "hub_loaded": true,
             "status": ""
         }
     }
