@@ -56,9 +56,9 @@
     "NightOwl": {
         "leg5": {
             "spool_id": "",
-            "material": "",
+            "material": "ABS",
             "color": "#000000",
-            "weight": 0,
+            "weight": "0",
             "runout_lane": "NONE",
             "map": "T4",
             "index": 1,
@@ -68,15 +68,15 @@
         },
         "leg6": {
             "spool_id": "",
-            "material": "",
-            "color": "#000000",
-            "weight": 0,
+            "material": "ASA",
+            "color": "#3B7A33",
+            "weight": "0",
             "runout_lane": "NONE",
             "map": "T5",
             "index": 2,
             "tool_loaded": false,
             "hub_loaded": false,
-            "status": ""
+            "status": "loading"
         }
     }
 }
