@@ -72,7 +72,7 @@
             "color": "#000000",
             "weight": 0,
             "runout_lane": "NONE",
-            "map": "T6",
+            "map": "T5",
             "index": 2,
             "tool_loaded": false,
             "hub_loaded": true,
