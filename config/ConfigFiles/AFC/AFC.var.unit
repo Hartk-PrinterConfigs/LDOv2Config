@@ -53,30 +53,30 @@
             "status": null
         }
     },
-    "NightTurtle": {
+    "NightOwl": {
         "leg5": {
             "spool_id": "",
             "material": "",
             "color": "#000000",
-            "weight": "0",
-            "runout_lane": "leg6",
+            "weight": 0,
+            "runout_lane": "NONE",
             "map": "T4",
             "index": 1,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         },
         "leg6": {
             "spool_id": "",
             "material": "",
-            "color": "#1D6902",
-            "weight": "0",
-            "runout_lane": "leg1",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
             "map": "T5",
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         }
     }
 }
