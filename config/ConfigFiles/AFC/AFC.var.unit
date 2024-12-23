@@ -24,7 +24,7 @@
             "hub_loaded": true,
             "runout_lane": "leg4",
             "map": "T1",
-            "status": ""
+            "status": "unloading"
         },
         "leg3": {
             "spool_id": "",
@@ -37,7 +37,7 @@
             "hub_loaded": true,
             "runout_lane": "leg1",
             "map": "T2",
-            "status": "Tooled"
+            "status": null
         },
         "leg4": {
             "spool_id": "",
@@ -50,7 +50,7 @@
             "hub_loaded": true,
             "runout_lane": "leg5",
             "map": "T3",
-            "status": ""
+            "status": null
         }
     },
     "NightTurtle": {
@@ -64,7 +64,7 @@
             "index": 1,
             "tool_loaded": false,
             "hub_loaded": true,
-            "status": ""
+            "status": null
         },
         "leg6": {
             "spool_id": "",
@@ -74,9 +74,9 @@
             "runout_lane": "leg1",
             "map": "T5",
             "index": 2,
-            "tool_loaded": true,
+            "tool_loaded": false,
             "hub_loaded": true,
-            "status": "Tooled"
+            "status": null
         }
     }
 }
