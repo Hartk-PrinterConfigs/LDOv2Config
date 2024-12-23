@@ -3,7 +3,7 @@
         "leg1": {
             "spool_id": "",
             "material": "ABS",
-            "color": "#000000",
+            "color": "#FF0000",
             "weight": "0",
             "command": null,
             "index": 1,
@@ -16,7 +16,7 @@
         "leg2": {
             "spool_id": "",
             "material": "ASA",
-            "color": "#4C773D",
+            "color": "#0077FF",
             "weight": "0",
             "command": null,
             "index": 2,
@@ -29,7 +29,7 @@
         "leg3": {
             "spool_id": "",
             "material": "ABS",
-            "color": "#FFFFFF",
+            "color": "#FF8800",
             "weight": "0",
             "command": null,
             "index": 3,
@@ -42,13 +42,13 @@
         "leg4": {
             "spool_id": "",
             "material": "ASA",
-            "color": "#FF6B00",
+            "color": "#6D00FF",
             "weight": "0",
             "command": null,
             "index": 4,
             "tool_loaded": false,
             "hub_loaded": true,
-            "runout_lane": "NONE",
+            "runout_lane": "leg5",
             "map": "T3",
             "status": ""
         }
@@ -58,8 +58,8 @@
             "spool_id": "",
             "material": "",
             "color": "#000000",
-            "weight": 0,
-            "runout_lane": "NONE",
+            "weight": "0",
+            "runout_lane": "leg6",
             "map": "T4",
             "index": 1,
             "tool_loaded": false,
@@ -69,14 +69,14 @@
         "leg6": {
             "spool_id": "",
             "material": "",
-            "color": "#000000",
-            "weight": 0,
-            "runout_lane": "NONE",
+            "color": "#1D6902",
+            "weight": "0",
+            "runout_lane": "leg1",
             "map": "T5",
             "index": 2,
-            "tool_loaded": false,
+            "tool_loaded": true,
             "hub_loaded": true,
-            "status": ""
+            "status": "Tooled"
         }
     }
 }
