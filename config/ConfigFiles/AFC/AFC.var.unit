@@ -21,10 +21,10 @@
             "command": null,
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": false,
+            "hub_loaded": true,
             "runout_lane": "leg4",
             "map": "T1",
-            "status": ""
+            "status": null
         },
         "leg3": {
             "spool_id": "",
