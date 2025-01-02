@@ -62,7 +62,7 @@
             "runout_lane": "NONE",
             "map": "T4",
             "index": 1,
-            "tool_loaded": false,
+            "tool_loaded": true,
             "hub_loaded": true,
             "status": "Tooled"
         },
