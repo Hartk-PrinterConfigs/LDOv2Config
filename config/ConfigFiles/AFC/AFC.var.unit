@@ -47,10 +47,10 @@
             "command": null,
             "index": 4,
             "tool_loaded": false,
-            "hub_loaded": true,
+            "hub_loaded": false,
             "runout_lane": "leg5",
             "map": "T3",
-            "status": null
+            "status": ""
         }
     },
     "NightOwl": {
@@ -62,9 +62,9 @@
             "runout_lane": "NONE",
             "map": "T4",
             "index": 1,
-            "tool_loaded": true,
-            "hub_loaded": true,
-            "status": "Tooled"
+            "tool_loaded": false,
+            "hub_loaded": false,
+            "status": ""
         },
         "leg6": {
             "spool_id": "",
