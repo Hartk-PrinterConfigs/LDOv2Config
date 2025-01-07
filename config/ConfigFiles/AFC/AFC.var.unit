@@ -49,21 +49,19 @@
             "status": ""
         }
     },
-    "5k": {
+    "NightOwl": {
         "leg5": {
             "spool_id": "",
             "material": "",
             "color": "#000000",
             "weight": 0,
             "runout_lane": "NONE",
-            "map": "T6",
+            "map": "T4",
             "index": 1,
             "tool_loaded": false,
             "hub_loaded": false,
             "status": ""
-        }
-    },
-    "NightOwl": {
+        },
         "leg6": {
             "spool_id": "",
             "material": "",
@@ -72,6 +70,20 @@
             "runout_lane": "NONE",
             "map": "T5",
             "index": 2,
+            "tool_loaded": false,
+            "hub_loaded": false,
+            "status": ""
+        }
+    },
+    "5k": {
+        "leg7": {
+            "spool_id": "",
+            "material": "",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
+            "map": "T6",
+            "index": 1,
             "tool_loaded": false,
             "hub_loaded": false,
             "status": ""
