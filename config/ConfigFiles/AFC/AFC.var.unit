@@ -1,33 +1,33 @@
 {
     "BoxTurtle": {
         "leg1": {
-            "spool_id": "5",
+            "spool_id": "7",
             "material": "ABS",
-            "color": "#00ff00",
-            "weight": 0,
+            "color": "#dc0004",
+            "weight": 977.3635,
             "runout_lane": "NONE",
             "map": "T0",
             "index": 1,
             "tool_loaded": false,
-            "hub_loaded": false,
-            "status": ""
+            "hub_loaded": true,
+            "status": null
         },
         "leg2": {
-            "spool_id": "4",
+            "spool_id": "5",
             "material": "ABS",
-            "color": "#3a6c97",
+            "color": "#00ff00",
             "weight": 1000.0,
             "runout_lane": "NONE",
             "map": "T1",
             "index": 2,
-            "tool_loaded": false,
-            "hub_loaded": false,
-            "status": ""
+            "tool_loaded": true,
+            "hub_loaded": true,
+            "status": "Tooled"
         },
         "leg3": {
-            "spool_id": "1",
+            "spool_id": "8",
             "material": "ABS",
-            "color": "#5400dc",
+            "color": "#ff6f00",
             "weight": 1000.0,
             "runout_lane": "NONE",
             "map": "T2",
@@ -37,10 +37,10 @@
             "status": ""
         },
         "leg4": {
-            "spool_id": "",
-            "material": "",
-            "color": "#000000",
-            "weight": 0,
+            "spool_id": "1",
+            "material": "ABS",
+            "color": "#5400dc",
+            "weight": 1000.0,
             "runout_lane": "NONE",
             "map": "T3",
             "index": 4,
