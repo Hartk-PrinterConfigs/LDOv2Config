@@ -1,16 +1,16 @@
 {
     "BoxTurtle": {
         "leg1": {
-            "spool_id": "7",
-            "material": "ABS",
-            "color": "#dc0004",
-            "weight": 977.3635,
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "NONE",
             "map": "T0",
             "index": 1,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         },
         "leg2": {
             "spool_id": "5",
@@ -20,9 +20,9 @@
             "runout_lane": "NONE",
             "map": "T1",
             "index": 2,
-            "tool_loaded": true,
+            "tool_loaded": false,
             "hub_loaded": true,
-            "status": "Tooled"
+            "status": null
         },
         "leg3": {
             "spool_id": "8",
@@ -33,8 +33,8 @@
             "map": "T2",
             "index": 3,
             "tool_loaded": false,
-            "hub_loaded": false,
-            "status": ""
+            "hub_loaded": true,
+            "status": null
         },
         "leg4": {
             "spool_id": "1",
@@ -45,8 +45,8 @@
             "map": "T3",
             "index": 4,
             "tool_loaded": false,
-            "hub_loaded": false,
-            "status": ""
+            "hub_loaded": true,
+            "status": null
         }
     },
     "NightOwl": {
