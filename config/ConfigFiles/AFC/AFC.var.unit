@@ -13,40 +13,40 @@
             "status": ""
         },
         "leg2": {
-            "spool_id": "5",
-            "material": "ABS",
-            "color": "#00ff00",
-            "weight": 1000.0,
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "NONE",
             "map": "T1",
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         },
         "leg3": {
-            "spool_id": "8",
-            "material": "ABS",
-            "color": "#ff6f00",
-            "weight": 1000.0,
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "NONE",
             "map": "T2",
             "index": 3,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         },
         "leg4": {
-            "spool_id": "1",
-            "material": "ABS",
-            "color": "#5400dc",
-            "weight": 1000.0,
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "NONE",
             "map": "T3",
             "index": 4,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         }
     },
     "NightOwl": {
@@ -84,9 +84,9 @@
             "runout_lane": "NONE",
             "map": "T6",
             "index": 1,
-            "tool_loaded": false,
-            "hub_loaded": false,
-            "status": "loading"
+            "tool_loaded": true,
+            "hub_loaded": true,
+            "status": "Tooled"
         }
     }
 }
