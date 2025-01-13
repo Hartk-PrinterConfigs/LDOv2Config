@@ -68,11 +68,11 @@
             "color": "",
             "weight": "",
             "runout_lane": "NONE",
-            "map": "T6",
+            "map": "T5",
             "index": 2,
             "tool_loaded": false,
             "hub_loaded": true,
-            "status": "loading"
+            "status": null
         }
     },
     "5k": {
@@ -82,7 +82,7 @@
             "color": "#000000",
             "weight": 4549.29,
             "runout_lane": "NONE",
-            "map": "T5",
+            "map": "T6",
             "index": 1,
             "tool_loaded": false,
             "hub_loaded": true,
