@@ -27,8 +27,8 @@
         "leg3": {
             "spool_id": "",
             "material": "",
-            "color": "#000000",
-            "weight": 0,
+            "color": "",
+            "weight": "",
             "runout_lane": "NONE",
             "map": "T2",
             "index": 3,
@@ -63,16 +63,16 @@
             "status": ""
         },
         "leg6": {
-            "spool_id": "7",
-            "material": "ABS",
-            "color": "#dc0004",
-            "weight": 977.3635,
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "NONE",
-            "map": "T5",
+            "map": "T6",
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": false,
-            "status": ""
+            "hub_loaded": true,
+            "status": "loading"
         }
     },
     "5k": {
@@ -80,13 +80,13 @@
             "spool_id": "9",
             "material": "ABS",
             "color": "#000000",
-            "weight": 4628.125,
+            "weight": 4549.29,
             "runout_lane": "NONE",
-            "map": "T6",
+            "map": "T5",
             "index": 1,
             "tool_loaded": false,
             "hub_loaded": true,
-            "status": null
+            "status": "loading"
         }
     }
 }
