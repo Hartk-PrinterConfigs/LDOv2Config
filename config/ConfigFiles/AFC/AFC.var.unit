@@ -86,7 +86,7 @@
             "index": 1,
             "tool_loaded": true,
             "hub_loaded": true,
-            "status": "Tooled"
+            "status": "loading"
         }
     }
 }
