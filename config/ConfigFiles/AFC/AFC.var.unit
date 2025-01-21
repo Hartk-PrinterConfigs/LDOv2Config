@@ -15,8 +15,8 @@
         "leg2": {
             "spool_id": "",
             "material": "",
-            "color": "#000000",
-            "weight": 0,
+            "color": "",
+            "weight": "",
             "runout_lane": "NONE",
             "map": "T1",
             "index": 2,
@@ -32,9 +32,9 @@
             "runout_lane": "NONE",
             "map": "T2",
             "index": 3,
-            "tool_loaded": true,
+            "tool_loaded": false,
             "hub_loaded": true,
-            "status": "Tooled"
+            "status": null
         },
         "leg4": {
             "spool_id": "",
@@ -51,10 +51,10 @@
     },
     "NightOwl": {
         "leg5": {
-            "spool_id": "1",
-            "material": "ABS",
-            "color": "#5400dc",
-            "weight": 1000.0,
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "NONE",
             "map": "T4",
             "index": 1,
@@ -84,9 +84,9 @@
             "runout_lane": "NONE",
             "map": "T6",
             "index": 1,
-            "tool_loaded": false,
+            "tool_loaded": true,
             "hub_loaded": true,
-            "status": null
+            "status": "Tooled"
         }
     }
 }
