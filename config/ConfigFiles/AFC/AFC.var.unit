@@ -8,9 +8,9 @@
             "runout_lane": "leg2",
             "map": "T0",
             "index": 1,
-            "tool_loaded": true,
+            "tool_loaded": false,
             "hub_loaded": true,
-            "status": "Tooled"
+            "status": null
         },
         "leg2": {
             "spool_id": "6",
@@ -28,13 +28,13 @@
             "spool_id": "8",
             "material": "ABS",
             "color": "#ff6f00",
-            "weight": 999.762205,
+            "weight": 926.3158,
             "runout_lane": "leg4",
             "map": "T2",
             "index": 3,
-            "tool_loaded": false,
+            "tool_loaded": true,
             "hub_loaded": true,
-            "status": null
+            "status": "Tooled"
         },
         "leg4": {
             "spool_id": "1",
@@ -54,7 +54,7 @@
             "spool_id": "8",
             "material": "ABS",
             "color": "#ff6f00",
-            "weight": 999.762205,
+            "weight": 926.3158,
             "runout_lane": "leg6",
             "map": "T4",
             "index": 1,
