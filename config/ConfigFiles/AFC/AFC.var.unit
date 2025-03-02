@@ -5,43 +5,43 @@
             "material": "",
             "color": "",
             "weight": "",
-            "runout_lane": "leg2",
+            "runout_lane": "leg3",
             "map": "T0",
             "index": 1,
-            "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
-        },
-        "leg2": {
-            "spool_id": "6",
-            "material": "ABS",
-            "color": "#565656",
-            "weight": "",
-            "runout_lane": "leg3",
-            "map": "T1",
-            "index": 2,
-            "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
-        },
-        "leg3": {
-            "spool_id": "8",
-            "material": "ABS",
-            "color": "#ff6f00",
-            "weight": 926.3158,
-            "runout_lane": "leg4",
-            "map": "T2",
-            "index": 3,
             "tool_loaded": true,
             "hub_loaded": true,
             "status": "Tooled"
         },
-        "leg4": {
-            "spool_id": "1",
-            "material": "ABS",
-            "color": "#5400dc",
-            "weight": 1000.0,
+        "leg2": {
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
+            "runout_lane": "leg4",
+            "map": "T1",
+            "index": 2,
+            "tool_loaded": false,
+            "hub_loaded": false,
+            "status": ""
+        },
+        "leg3": {
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "leg5",
+            "map": "T2",
+            "index": 3,
+            "tool_loaded": false,
+            "hub_loaded": false,
+            "status": ""
+        },
+        "leg4": {
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
+            "runout_lane": "leg6",
             "map": "T3",
             "index": 4,
             "tool_loaded": false,
@@ -51,10 +51,10 @@
     },
     "NightOwl": {
         "leg5": {
-            "spool_id": "8",
-            "material": "ABS",
-            "color": "#ff6f00",
-            "weight": 926.3158,
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "leg6",
             "map": "T4",
             "index": 1,
@@ -63,16 +63,16 @@
             "status": ""
         },
         "leg6": {
-            "spool_id": "7",
-            "material": "ABS",
-            "color": "#dc0004",
-            "weight": 977.3635,
+            "spool_id": "",
+            "material": "",
+            "color": "",
+            "weight": "",
             "runout_lane": "leg7",
             "map": "T5",
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         }
     },
     "5k": {
