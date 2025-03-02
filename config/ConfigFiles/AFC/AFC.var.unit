@@ -45,8 +45,8 @@
             "map": "T3",
             "index": 4,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         }
     },
     "NightOwl": {
