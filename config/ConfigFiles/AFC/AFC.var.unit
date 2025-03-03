@@ -18,7 +18,7 @@
             "color": "",
             "weight": "",
             "runout_lane": "leg4",
-            "map": "T1",
+            "map": "T2",
             "index": 2,
             "tool_loaded": false,
             "hub_loaded": true,
@@ -30,11 +30,11 @@
             "color": "",
             "weight": "",
             "runout_lane": "leg5",
-            "map": "T2",
+            "map": "T1",
             "index": 3,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         },
         "leg4": {
             "spool_id": "",
@@ -45,8 +45,8 @@
             "map": "T3",
             "index": 4,
             "tool_loaded": false,
-            "hub_loaded": false,
-            "status": ""
+            "hub_loaded": true,
+            "status": null
         }
     },
     "NightOwl": {
@@ -59,8 +59,8 @@
             "map": "T4",
             "index": 1,
             "tool_loaded": false,
-            "hub_loaded": false,
-            "status": ""
+            "hub_loaded": true,
+            "status": null
         },
         "leg6": {
             "spool_id": "",
@@ -71,8 +71,8 @@
             "map": "T5",
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": false,
-            "status": ""
+            "hub_loaded": true,
+            "status": null
         }
     },
     "5k": {
