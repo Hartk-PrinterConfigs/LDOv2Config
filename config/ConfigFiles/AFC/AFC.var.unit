@@ -8,9 +8,9 @@
             "runout_lane": "leg3",
             "map": "T0",
             "index": 1,
-            "tool_loaded": false,
+            "tool_loaded": true,
             "hub_loaded": true,
-            "status": null
+            "status": "Tooled"
         },
         "leg2": {
             "spool_id": "",
@@ -84,9 +84,9 @@
             "runout_lane": "leg1",
             "map": "T6",
             "index": 1,
-            "tool_loaded": true,
+            "tool_loaded": false,
             "hub_loaded": true,
-            "status": "Tooled"
+            "status": null
         }
     }
 }
