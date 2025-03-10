@@ -8,9 +8,9 @@
             "runout_lane": "leg3",
             "map": "T0",
             "index": 1,
-            "tool_loaded": true,
+            "tool_loaded": false,
             "hub_loaded": true,
-            "status": "unloading"
+            "status": null
         },
         "leg2": {
             "spool_id": "",
@@ -21,8 +21,8 @@
             "map": "T2",
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         },
         "leg3": {
             "spool_id": "",
@@ -45,8 +45,8 @@
             "map": "T3",
             "index": 4,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         }
     },
     "NightOwl": {
@@ -84,9 +84,9 @@
             "runout_lane": "leg1",
             "map": "T6",
             "index": 1,
-            "tool_loaded": false,
+            "tool_loaded": true,
             "hub_loaded": true,
-            "status": null
+            "status": "Tooled"
         }
     }
 }
