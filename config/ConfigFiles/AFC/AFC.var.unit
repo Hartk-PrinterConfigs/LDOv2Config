@@ -10,7 +10,7 @@
             "index": 1,
             "tool_loaded": false,
             "hub_loaded": false,
-            "status": ""
+            "status": "loading"
         },
         "leg2": {
             "spool_id": "",
