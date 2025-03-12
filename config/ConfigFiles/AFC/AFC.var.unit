@@ -3,22 +3,22 @@
         "leg1": {
             "spool_id": "",
             "material": "",
-            "color": "",
-            "weight": "",
-            "runout_lane": "leg3",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
             "map": "T0",
             "index": 1,
-            "tool_loaded": true,
-            "hub_loaded": true,
-            "status": "unloading"
+            "tool_loaded": false,
+            "hub_loaded": false,
+            "status": ""
         },
         "leg2": {
             "spool_id": "",
             "material": "",
-            "color": "",
-            "weight": "",
-            "runout_lane": "leg4",
-            "map": "T2",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
+            "map": "T1",
             "index": 2,
             "tool_loaded": false,
             "hub_loaded": false,
@@ -27,10 +27,10 @@
         "leg3": {
             "spool_id": "",
             "material": "",
-            "color": "",
-            "weight": "",
-            "runout_lane": "leg5",
-            "map": "T1",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
+            "map": "T2",
             "index": 3,
             "tool_loaded": false,
             "hub_loaded": false,
@@ -39,9 +39,9 @@
         "leg4": {
             "spool_id": "",
             "material": "",
-            "color": "",
-            "weight": "",
-            "runout_lane": "leg6",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
             "map": "T3",
             "index": 4,
             "tool_loaded": false,
@@ -53,9 +53,9 @@
         "leg5": {
             "spool_id": "",
             "material": "",
-            "color": "",
-            "weight": "",
-            "runout_lane": "leg6",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
             "map": "T4",
             "index": 1,
             "tool_loaded": false,
@@ -65,28 +65,28 @@
         "leg6": {
             "spool_id": "",
             "material": "",
-            "color": "",
-            "weight": "",
-            "runout_lane": "leg7",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
             "map": "T5",
             "index": 2,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         }
     },
     "5k": {
         "leg7": {
             "spool_id": "",
             "material": "",
-            "color": "",
-            "weight": "",
-            "runout_lane": "leg1",
+            "color": "#000000",
+            "weight": 0,
+            "runout_lane": "NONE",
             "map": "T6",
             "index": 1,
             "tool_loaded": false,
-            "hub_loaded": true,
-            "status": null
+            "hub_loaded": false,
+            "status": ""
         }
     }
 }
