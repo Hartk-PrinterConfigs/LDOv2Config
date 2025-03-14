@@ -1,10 +1,10 @@
 {
     "TurtleBox": {
         "leg1": {
-            "spool_id": "",
-            "material": "",
+            "spool_id": "9",
+            "material": "ABS",
             "color": "#000000",
-            "weight": 0,
+            "weight": 3898.94,
             "runout_lane": "NONE",
             "map": "T0",
             "index": 1,
