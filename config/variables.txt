@@ -1,3 +1,6 @@
 [Variables]
+cam_pos_x = 150.0
+cam_pos_y = 150.0
+cam_pos_z = 5.0
 nozzle_expansion_applied_offset = 0
 
