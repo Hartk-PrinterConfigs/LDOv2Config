@@ -18,5 +18,5 @@ t3_offset_y = 0.0
 t3_offset_z = -0.002916666712053262
 t4_offset_x = 0.0
 t4_offset_y = 0.0
-t4_offset_z = 0.09999999995410347
+t4_offset_z = 5
 
