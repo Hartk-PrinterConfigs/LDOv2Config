@@ -1,5 +1,5 @@
 [Variables]
-active_tool = 1
+active_tool = 0
 cam_pos_x = 160.0
 cam_pos_y = 169.5
 cam_pos_z = 5.0
@@ -9,14 +9,14 @@ t0_offset_y = 0.0
 t0_offset_z = 0.0
 t1_offset_x = 0.0
 t1_offset_y = 0.0
-t1_offset_z = -0.005416666710845664
+t1_offset_z = -0.03791666671113784
 t2_offset_x = 0.0
 t2_offset_y = 0.0
-t2_offset_z = 0.0112499999553143
+t2_offset_z = 0.042916666621682774
 t3_offset_x = 0.0
 t3_offset_y = 0.0
-t3_offset_z = -0.002916666712053262
+t3_offset_z = 0.04374999995362394
 t4_offset_x = 0.0
 t4_offset_y = 0.0
-t4_offset_z = 5
+t4_offset_z = 0.08874999995311732
 
