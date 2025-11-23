@@ -1,23 +1,23 @@
 [Variables]
-active_tool = 0
-cam_pos_x = 160.0
-cam_pos_y = 169.5
-cam_pos_z = 5.0
+active_tool = 4
+cam_pos_x = 69.0
+cam_pos_y = 28.5
+cam_pos_z = 25.267
 nozzle_expansion_applied_offset = 0
 nozzle_expansion_coefficient = 0.08125000000115379
 t0_offset_x = 0.0
 t0_offset_y = 0.0
 t0_offset_z = 0.0
-t1_offset_x = 0.0
-t1_offset_y = 0.0
+t1_offset_x = 0.16
+t1_offset_y = -0.24
 t1_offset_z = 0.022500000000091447
-t2_offset_x = 0.0
-t2_offset_y = 0.0
+t2_offset_x = -0.02
+t2_offset_y = -0.17
 t2_offset_z = 0.02024999999996572
 t3_offset_x = 0.0
 t3_offset_y = 0.0
 t3_offset_z = 0.021249999999406233
 t4_offset_x = 0.0
-t4_offset_y = 0.0
+t4_offset_y = -0.26
 t4_offset_z = 0.021249999999154667
 
