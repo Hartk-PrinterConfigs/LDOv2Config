@@ -1,5 +1,5 @@
 [Variables]
-active_tool = 3
+active_tool = 2
 cam_pos_x = 69.0
 cam_pos_y = 28.5
 cam_pos_z = 25.267
