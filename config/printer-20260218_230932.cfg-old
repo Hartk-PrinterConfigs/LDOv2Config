@@ -35,15 +35,6 @@ gcode:
     # Restore previous gcode state (absolute/relative, etc)
     RESTORE_GCODE_STATE NAME=TEST_EXTRUDER
 
-[ktamv]
-nozzle_cam_url: http://localhost/webcam/snapshot?max_delay=0
-server_url: http://localhost:8085
-move_speed: 1800
-send_frame_to_cloud: true
-detection_tolerance: 0
-
-[include ktamv-macros.cfg]
-
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
 #*#
@@ -86,6 +77,3 @@ detection_tolerance: 0
 #*# model_range = 0.200000,5.000000
 #*# model_temp = 49.082886
 #*# model_offset = 0.00000
-
-
-

@@ -99,12 +99,3 @@ path: ~/crowsnest
 origin: https://github.com/mainsail-crew/crowsnest.git
 managed_services: crowsnest
 install_script: tools/pkglist.sh
-
-
-[update_manager ktamv]]
-type: git_repo
-path: ~/kTAMV
-origin: https://github.com/TypQxQ/kTAMV.git
-primary_branch: main
-install_script: install.sh
-managed_services: klipper

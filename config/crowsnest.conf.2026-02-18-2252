@@ -1,0 +1,10 @@
+[crowsnest]
+log_path: ~/printer_data/logs/crowsnest.log
+log_level: quiet
+
+[cam logicC922]
+mode: camera-streamer
+port: 8080
+device: /dev/v4l/by-id/usb-046d_C922_Pro_Stream_Webcam_534F5E9F-video-index0
+resolution: 800x600
+max_fps: 30
